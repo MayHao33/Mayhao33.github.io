@@ -108,6 +108,20 @@
     .intro h1 { font: inherit; }
     .intro p:last-child { margin-bottom: 0; }
     .intro strong { font-weight: 700; }
+    .intro h1 { margin-bottom: 8px; }
+    .intro .advisor {
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .advisor a {
+      color: var(--ink);
+      text-decoration-color: var(--orange-deep);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    .advisor a:hover { color: var(--orange-deep); }
     .hello-link {
       color: var(--orange-deep);
       font-weight: 700;
@@ -235,6 +249,8 @@
       .intro { font-size: 19px; line-height: 1.72; }
       html[lang="zh-CN"] .intro { font-size: 18px; line-height: 1.85; }
       .intro p, .intro h1 { margin-bottom: 24px; }
+      .intro h1 { margin-bottom: 8px; }
+      .intro .advisor { margin-bottom: 24px; font-size: 14px; }
       .divider { margin: 38px 0 27px; }
       .content-section { padding-bottom: 27px; }
       .research-list li { gap: 10px; font-size: 14px; }
@@ -258,6 +274,7 @@
       <h1 id="intro-title">
         <span data-zh="你好，我是 " data-en="I'm ">I'm </span><strong data-zh="郝梅" data-en="May">May</strong><span data-zh="，山东大学网络空间安全硕士研究生。" data-en=", a master's student in Cyberspace Security at Shandong University.">, a master's student in Cyberspace Security at Shandong University.</span>
       </h1>
+      <p class="advisor"><span data-zh="导师：" data-en="Advisor: ">Advisor: </span><a href="https://hukaisdu.github.io/" target="_blank" rel="noopener noreferrer" data-zh="胡凯" data-en="Kai Hu">Kai Hu</a></p>
       <p data-zh="我主要关注对称密码分析，研究兴趣包括差分与线性密码分析，以及固定密钥密码分析。" data-en="My research interests are symmetric-key cryptanalysis, including differential and linear cryptanalysis and fixed-key cryptanalysis.">My research interests are symmetric-key cryptanalysis, including differential and linear cryptanalysis and fixed-key cryptanalysis.</p>
       <p><a class="hello-link" href="mailto:mayhao03@mail.sdu.edu.cn" data-zh="写封邮件" data-en="Say hello">Say hello</a><span data-zh="，或继续往下看看。" data-en=", or keep scrolling.">, or keep scrolling.</span></p>
     </div>
