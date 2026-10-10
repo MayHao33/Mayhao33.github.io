@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="May (郝梅) | Master&apos;s student in Cyberspace Security at Shandong University. Research interests: symmetric-key cryptanalysis, differential and linear cryptanalysis, and fixed-key cryptanalysis.">
+  <title data-zh="郝梅 · May｜学术主页" data-en="May · 郝梅 | Academic Homepage">May · 郝梅 | Academic Homepage</title>
+  <style>
+    :root {
+      --orange: #e6674c;
+      --orange-deep: #c94e35;
+      --ink: #272b2e;
+      --muted: #62676a;
+      --paper: #fffefb;
+      --line: #d9d6d1;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      padding: 73px 24px 48px;
+      color: var(--ink);
+      background-color: var(--orange);
+      background-image: radial-gradient(rgba(103, 44, 31, .17) .8px, transparent .9px);
+      background-size: 17px 17px;
+      font-family: "Courier New", "Microsoft YaHei", monospace;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--orange-deep);
+      outline-offset: 5px;
+    }
+    .skip-link {
+      position: absolute;
+      top: -70px;
+      left: 18px;
+      z-index: 5;
+      padding: 9px 12px;
+      color: #fff;
+      background: var(--ink);
+    }
+    .skip-link:focus { top: 12px; }
+    .page-card {
+      position: relative;
+      width: min(100%, 860px);
+      margin: 0 auto;
+      padding: 74px clamp(32px, 6.4vw, 76px) 49px;
+      background: var(--paper);
+      box-shadow: 0 8px 0 rgba(67, 43, 35, .17), 0 20px 44px rgba(67, 43, 35, .09);
+    }
+    .mark {
+      position: absolute;
+      top: -44px;
+      left: 50%;
+      display: grid;
+      width: 88px;
+      height: 88px;
+      place-items: center;
+      transform: translateX(-50%);
+      border: 5px solid var(--orange);
+      border-radius: 50%;
+      background: #23282b;
+      color: #fff;
+      font-family: Georgia, serif;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -.09em;
+      line-height: 1;
+      user-select: none;
+    }
+    .language-toggle {
+      position: absolute;
+      top: 26px;
+      right: clamp(25px, 5.7vw, 69px);
+      padding: 4px 6px;
+      border: 0;
+      border-bottom: 1px solid currentColor;
+      background: transparent;
+      color: var(--ink);
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      cursor: pointer;
+      transition: color .2s ease-out;
+    }
+    .language-toggle:hover { color: var(--orange-deep); }
+    .eyebrow {
+      margin: 22px 0 32px;
+      color: var(--orange-deep);
+      font-family: "Courier New", "Microsoft YaHei", monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .intro {
+      max-width: 700px;
+      font-size: clamp(20px, 2.25vw, 23px);
+      font-weight: 400;
+      letter-spacing: .01em;
+      line-height: 1.75;
+    }
+    .intro p, .intro h1 { margin: 0 0 30px; }
+    .intro h1 { font: inherit; }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro strong { font-weight: 700; }
+    .hello-link {
+      color: var(--orange-deep);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s ease-out;
+    }
+    .hello-link:hover { border-color: currentColor; }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 49px 0 32px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+    .content-section { padding: 0 0 33px; }
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin: 0 0 19px;
+    }
+    .section-heading__number {
+      flex: none;
+      color: var(--orange-deep);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .section-heading h2 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+    .research-list { margin: 0; padding: 0; list-style: none; }
+    .research-list li {
+      display: grid;
+      grid-template-columns: 32px minmax(0, 1fr);
+      gap: 17px;
+      padding: 11px 0 13px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .research-list li:last-child { border-bottom: 0; }
+    .research-list__number { color: var(--orange-deep); font-size: 12px; }
+    .journey {
+      margin: 0 0 9px 7px;
+      padding: 0 0 1px 27px;
+      border-left: 1px solid var(--line);
+      list-style: none;
+    }
+    .journey li { position: relative; }
+    .journey li::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: -33px;
+      width: 11px;
+      height: 11px;
+      border: 2px solid var(--orange-deep);
+      border-radius: 50%;
+      background: var(--paper);
+    }
+    .journey__time {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--orange-deep);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    .journey h3 { margin: 0 0 4px; font-size: 16px; line-height: 1.6; }
+    .journey p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .contact { padding-top: 5px; text-align: center; }
+    .contact .divider { margin: 6px 0 23px; }
+    .contact-link {
+      display: inline-block;
+      max-width: 100%;
+      color: var(--ink);
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: 700;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+      text-decoration-color: var(--orange-deep);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 7px;
+      transition: color .2s ease-out;
+    }
+    .contact-link:hover { color: var(--orange-deep); }
+    .site-note {
+      margin: 31px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .06em;
+    }
+    html[lang="en"] .intro { letter-spacing: .015em; }
+    html[lang="zh-CN"] .intro {
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      font-size: clamp(19px, 2.15vw, 22px);
+      line-height: 1.85;
+      letter-spacing: .025em;
+    }
+    html[lang="zh-CN"] .research-list,
+    html[lang="zh-CN"] .journey,
+    html[lang="zh-CN"] .section-heading h2 {
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    }
+    @media (max-width: 600px) {
+      body { padding: 66px 13px 24px; background-size: 15px 15px; }
+      .page-card { padding: 66px 26px 39px; }
+      .mark { top: -39px; width: 78px; height: 78px; font-size: 43px; }
+      .language-toggle { top: 22px; right: 22px; }
+      .eyebrow { margin: 10px 0 26px; font-size: 11px; }
+      .intro { font-size: 19px; line-height: 1.72; }
+      html[lang="zh-CN"] .intro { font-size: 18px; line-height: 1.85; }
+      .intro p, .intro h1 { margin-bottom: 24px; }
+      .divider { margin: 38px 0 27px; }
+      .content-section { padding-bottom: 27px; }
+      .research-list li { gap: 10px; font-size: 14px; }
+      .contact-link { font-size: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-zh="跳转到正文" data-en="Skip to content">Skip to content</a>
+  <main class="page-card" id="main">
+    <div class="mark" aria-hidden="true">m.</div>
+    <button class="language-toggle" id="language-toggle" type="button" aria-label="切换到中文" aria-pressed="true" data-zh="EN" data-en="中文">中文</button>
+
+    <p class="eyebrow" data-zh="郝梅 / 山东大学" data-en="MAY / SHANDONG UNIVERSITY">MAY / SHANDONG UNIVERSITY</p>
+
+    <div class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">
+        <span data-zh="你好，我是 " data-en="I'm ">I'm </span><strong data-zh="郝梅" data-en="May">May</strong><span data-zh="，山东大学网络空间安全硕士研究生。" data-en=", a master's student in Cyberspace Security at Shandong University.">, a master's student in Cyberspace Security at Shandong University.</span>
+      </h1>
+      <p data-zh="我主要关注对称密码分析，研究兴趣包括差分与线性密码分析，以及固定密钥密码分析。" data-en="My research interests are symmetric-key cryptanalysis, including differential and linear cryptanalysis and fixed-key cryptanalysis.">My research interests are symmetric-key cryptanalysis, including differential and linear cryptanalysis and fixed-key cryptanalysis.</p>
+      <p><a class="hello-link" href="mailto:mayhao03@mail.sdu.edu.cn" data-zh="写封邮件" data-en="Say hello">Say hello</a><span data-zh="，或继续往下看看。" data-en=", or keep scrolling.">, or keep scrolling.</span></p>
+    </div>
+
+    <div class="divider" aria-hidden="true"><span>✳</span></div>
+
+    <section class="content-section" id="research" aria-labelledby="research-title">
+      <div class="section-heading"><span class="section-heading__number">01</span><h2 id="research-title" data-zh="研究方向" data-en="Research interests">Research interests</h2></div>
+      <ol class="research-list">
+        <li><span class="research-list__number">01</span><span data-zh="对称密码分析" data-en="Symmetric-key cryptanalysis">Symmetric-key cryptanalysis</span></li>
+        <li><span class="research-list__number">02</span><span data-zh="差分与线性密码分析" data-en="Differential and linear cryptanalysis">Differential and linear cryptanalysis</span></li>
+        <li><span class="research-list__number">03</span><span data-zh="固定密钥密码分析" data-en="Fixed-key cryptanalysis">Fixed-key cryptanalysis</span></li>
+      </ol>
+    </section>
+
+    <section class="content-section" id="journey" aria-labelledby="journey-title">
+      <div class="section-heading"><span class="section-heading__number">02</span><h2 id="journey-title" data-zh="学术经历" data-en="Academic journey">Academic journey</h2></div>
+      <ol class="journey">
+        <li>
+          <span class="journey__time" data-zh="现在" data-en="PRESENT">PRESENT</span>
+          <h3 data-zh="山东大学" data-en="Shandong University">Shandong University</h3>
+          <p data-zh="网络空间安全硕士研究生" data-en="Master's student in Cyberspace Security">Master's student in Cyberspace Security</p>
+        </li>
+      </ol>
+    </section>
+
+    <footer class="contact" id="contact">
+      <div class="divider"><span data-zh="邮箱" data-en="EMAIL">EMAIL</span></div>
+      <a class="contact-link" href="mailto:mayhao03@mail.sdu.edu.cn">mayhao03@mail.sdu.edu.cn</a>
+      <p class="site-note" data-zh="郝梅 · 个人学术主页" data-en="May · Academic homepage">May · Academic homepage</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById("language-toggle");
+      var translated = document.querySelectorAll("[data-zh][data-en]");
+      function setLanguage(lang) {
+        translated.forEach(function (element) {
+          element.textContent = element.getAttribute("data-" + lang);
+        });
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        toggle.setAttribute("aria-label", lang === "zh" ? "Switch to English" : "切换到中文");
+        toggle.setAttribute("aria-pressed", String(lang === "en"));
+      }
+      setLanguage("en");
+      toggle.addEventListener("click", function () {
+        setLanguage(document.documentElement.lang === "en" ? "zh" : "en");
+      });
+    }());
+  </script>
+</body>
+</html>
+
+
+
